@@ -1,0 +1,318 @@
+/*For screens bigger than 1024px wide*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('https://github.com/sophistique-chat/my-pic-bin/blob/master/restaurant_icons.png?raw=trueg');
+    /* /*Original image taken from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Fascinate Inline', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 auto;
+    color: #2e3d49;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    position: relative;
+    width: 600px;
+    min-height: 600px;
+    background-image: url('https://github.com/sophistique-chat/my-pic-bin/blob/master/floral-big.jpg?raw=true');
+    /*Original image taken from Pixabay*/
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 7px rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2em 2em 2em;
+    opacity: 1;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: url('https://github.com/sophistique-chat/my-pic-bin/blob/master/food.png?raw=true');
+    /*Original image taken from Subtle Patterns*/
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    opacity: 0.95;
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #8EACA8;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #C3C479;
+    font-size: 33px;
+}
+
+.deck .card.noMatch {
+    position: relative;
+    cursor: default;
+    background: #DF7E6A;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: auto;
+    font-size: 1.5em;
+    color: #2e3d49;
+    padding-bottom: 1em;
+}
+
+.score-panel .stars {
+    padding: 0;
+    display: inline-block;
+    margin: 0 0.3em 0 1em;
+    color: #DB836A;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .sec {
+    padding: 0 0.5em;
+    color: #DB836A;
+    font-size: 1em;
+}
+
+.score-panel .clock {
+    color: #EECE90;
+    font-size: 1em;
+}
+
+.score-panel .restart,
+.play {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    padding-left: 0.5em;
+    color: darkcyan;
+    transition-timing-function: ease;
+    -webkit-transition: width 0.1s, height 0.1s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 0.1s, height 0.1s;
+}
+
+.score-panel .restart:active,
+.play:active {
+    transform: translateY(1px) translateX(1px);
+    text-shadow: 5px 2px 5px #EECE90;
+}
+
+.score-panel .restart:hover,
+.play:hover {
+    text-shadow: 5px 3px 2px #EECE90;
+    color: #97B3AC;
+}
+
+.score-panel .moves {
+    padding: 0 1em 0 0;
+}
+
+/*MODAL reworked from* W3Schools snippet/
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-image: url('https://github.com/sophistique-chat/my-pic-bin/blob/master/floral-big.jpg?raw=true');
+    /*Original image taken from Pixabay*/
+}
+
+/* Modal Content */
+
+.modal-text {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: #ffffff;
+    opacity: 0.9;
+    padding-top: 62px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.modal-info {
+    width: 400px;
+    position: absolute;
+    margin: -4em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em 1em 1em;
+    font-size: 2em;
+    text-align: center;
+    color: #2e3d49;
+    font-weight: 800;
+    text-shadow: 1px 1px 15px white;
+}
+
+.button {
+    position: relative;
+    height: 125px;
+    width: 125px;
+    background: #2e3d49 url('https://github.com/sophistique-chat/my-pic-bin/blob/master/food.png?raw=true');
+    /*Original image taken from Subtle Patterns*/
+    font-size: 2em;
+    font-family: 'Coda', cursive;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 6em 1em 1em 1em;
+    padding: 0;
+    border: none;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition: width 0.1s, height 0.1s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 0.1s, height 0.1s;
+}
+
+.button:hover {
+    height: 135px;
+    width: 135px;
+    font-family: 'Coda', cursive;
+    color: #ffffff;
+}
+
+.button:active {
+    height: 135px;
+    width: 135px;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transform: translateY(4px);
+}
+
+.rate {
+    padding: 0;
+    margin: -2em 1em 1em 1em;
+    font-size: 1.7em;
+    color: #EECE90;
+    text-shadow: 5px 2px 5px #9490C4;
+}
+
+.rate:hover {
+    text-shadow: 5px 2px 15px #9490C4;
+}
+
+.noRate {
+    padding: 0;
+    margin: -4em 1em 1em 1em;
+    font-size: 1.2em;
+}
+
+/*Reworked the idea of Mampel (https://codepen.io/Mrshcom/pen/bqmFg)*/
+
+.bell {
+    color: coral;
+    animation-name: bell;
+    animation-duration: 0.35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bell {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    20% {
+        transform: rotateZ(5deg);
+    }
+    30% {
+        transform: rotateZ(-5deg);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+    60% {
+        transform: rotateZ(-5deg);
+    }
+    70% {
+        transform: rotateZ(5deg);
+    }
+    90% {
+        transform: rotateZ(-5deg);
+    }
+    100% {
+        transform: rotateZ(5deg0);
+    }
+}
+
+/*-------------------------------------*/
