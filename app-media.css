@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+
+/*For iPad Pro*/
+
+@media screen and (min-width: 920px) and (max-width: 1024px) {
+    h1 {
+        font-size: 5em;
+        margin: 1em 0 0.3em 0;
+    }
+    .deck {
+        position: relative;
+        width: 900px;
+        min-height: 800px;
+        padding: 38px;
+    }
+
+    .deck .card {
+        height: 170px;
+        width: 170px;
+    }
+    .score-panel {
+        display: inline-flex;
+        font-size: 2.5em;
+    }
+    .modal-text {
+        position: relative;
+        width: 800px;
+        min-height: 800px;
+        padding-top: 62px;
+        border-radius: 20px;
+        margin: 8em auto;
+    }
+    .modal-info {
+        position: absolute;
+        width: 800px;
+        margin: -3em auto;
+        padding: 0 0.5em 1em 0.5em;
+        font-size: 5em;
+    }
+    .noRate {
+        padding: 0;
+        margin: 0.5em 1em 1em 1em;
+        font-size: 1.2em;
+    }
+    .button {
+        position: relative;
+        height: 220px;
+        width: 220px;
+        font-size: 4em;
+        border-radius: 18px;
+        margin: 8em 1em 1em 1em;
+    }
+    .button:hover {
+        height: 240px;
+        width: 240px;
+    }
+
+    .button:active {
+        height: 220px;
+        width: 220px;
+    }
+    .rate {
+        margin: 0 1em 1em 1em;
+    }
+
+}
+
+/*-------------------------------------*/
+
+/*For iPad*/
+
+@media screen and (min-width: 768px) and (max-width: 921px) {
+    h1 {
+        font-size: 4em;
+        margin: 0.5em 0 0.3em 0;
+    }
+    .deck {
+        position: relative;
+        width: 700px;
+        min-height: 680px;
+        padding: 30px;
+    }
+
+    .deck .card {
+        height: 140px;
+        width: 140px;
+    }
+    .score-panel {
+        display: inline-flex;
+        font-size: 2.5em;
+    }
+    .modal-text {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        padding-top: 62px;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    .modal-info {
+        position: absolute;
+        width: 600px;
+        margin: -3em auto;
+        padding: 0 0.5em 1em 0.5em;
+        font-size: 4em;
+    }
+    .noRate {
+        padding: 0;
+        margin: 0.5em 1em 1em 1em;
+        font-size: 1.2em;
+    }
+    .button {
+        position: relative;
+        height: 220px;
+        width: 220px;
+        font-size: 4em;
+        border-radius: 18px;
+        margin: 7em 1em 1em 1em;
+    }
+    .button:hover {
+        height: 240px;
+        width: 240px;
+        font-size: 4em;
+    }
+
+    .button:active {
+        height: 220px;
+        width: 220px;
+        font-size: 4em;
+    }
+    .rate {
+        margin: 0 1em 1em 1em;
+    }
+}
+
+/*For screen widths between 400px and 625px*/
+
+@media screen and (min-width: 520px) and (max-width:625px) {
+    h1 {
+        font-size: 2em;
+        margin: 0.5em 0 0.3em 0;
+    }
+    .deck {
+        position: relative;
+        width: 510px;
+        height: 510px;
+        padding: 15px;
+    }
+
+    .deck .card {
+        height: 105px;
+        width: 105px;
+    }
+}
+
+/*________________________________*/
+
+/*For screens with max width 519px*/
+
+@media screen and (min-width: 395px) and (max-width: 519px) {
+    h1 {
+        font-size: 2em;
+        margin: 0.5em 0 0.3em 0;
+    }
+
+    .deck {
+        width: 390px;
+        min-height: 380px;
+        padding: 12px;
+    }
+
+    .deck .card {
+        height: 85px;
+        width: 85px;
+    }
+
+    .modal-text {
+        position: relative;
+        width: 370px;
+        height: 300px;
+    }
+
+    .modal-info {
+        width: 300px;
+        font-size: 2em;
+    }
+}
+
+/*________________________________*/
+
+/*Galaxy 5 and for screens bigger than 320px*/
+
+@media screen and (min-width: 320px) and (max-width: 394px) {
+    h1 {
+        font-size: 2em;
+        margin: 0.5em 0 0.3em 0;
+    }
+
+    .deck {
+        width: 320px;
+        min-height: 250px;
+        padding: 12px;
+    }
+
+    .deck .card {
+        height: 65px;
+        width: 65px;
+    }
+
+    .modal-text {
+        position: relative;
+        width: 300px;
+        padding: 0 0 -1em 0;
+    }
+
+    .modal-info {
+        width: 300px;
+        font-size: 2em;
+    }
+    .button {
+        position: relative;
+        height: 120px;
+        width: 120px;
+        font-size: 2em;
+        border-radius: 18px;
+        margin: 3.5em 1em -1.5em 1em;
+    }
+
+    .button:hover {
+        height: 140px;
+        width: 140px;
+        font-size: 2em;
+    }
+
+    .button:active {
+        height: 120px;
+        width: 120px;
+        font-size: 2em;
+    }
+}
+
+/*----------------------------------*/
