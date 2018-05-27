@@ -33,6 +33,7 @@
 * Stars counter displays a rotating star indicating the current score.
 * Matched and unmatched pairs of cards display corresponding animation.
 * The Game counts the amount of time taken to win and displays it when all 16 cards are matched.
+* The Game is optimized for various screen sizes.
 ----
 ----
 #### **NOTE**
