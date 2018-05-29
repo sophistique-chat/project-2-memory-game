@@ -15,14 +15,12 @@
 ----
 * Open the cards to find matches.
 * Matched cards stay open, unmatched cards flip closed.
+* You have 60 seconds to match all the cards!
 * Buttons _Play_ and _Restart_ are used to start and restart the game.
-* Game progress is calculated based on the amount of time used to match all the cards:
-    - If you match all the cards within 15 seconds:
-        - 3 star reward is displayed;
-    -  If you match all the cards within 30 seconds:
-        - 2 star reward is displayed;
-    -  If you match all the cards within 60 seconds:
-        - 1 star reward is displayed;
+* Game progress is calculated based on the amount of time and moves used to match all the cards:
+* Be thoughtful! In order to get a higher star rating match all the cards with the minimum number of moves possible.
+    - If you manage to match all the cards before the time runs out:
+        - A screen appears showing your star rating, # of moves and the time used to match all the cards.
     -  If you fail to match all the cards within 60 seconds:
         - Game over screen appears.
 
@@ -31,8 +29,9 @@
 ----
 * Session timer is showing the time left until the game stops.
 * Stars counter displays a rotating star indicating the current score.
+* Moves counter displays current number of moves.
 * Matched and unmatched pairs of cards display corresponding animation.
-* The Game counts the amount of time taken to win and displays it when all 16 cards are matched.
+* The Game counts the amount of time and moves taken to win and displays it when all 16 cards are matched.
 * The Game is optimized for various screen sizes.
 ----
 ----
@@ -48,6 +47,20 @@ Useful sources:
 - https://developer.mozilla.org/
 - https://dillinger.io/
 - www.google.com
+----
+External libraries:
+jQuery:
+- https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+Google Fonts:
+- https://fonts.googleapis.com/css?family=Coda|Fascinate+Inline
+Font Awesome:
+- https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp
+Bootstrap:
+- https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+Google Sound Library:
+- https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg
+- https://actions.google.com/sounds/v1/cartoon/tympani_bing.ogg
+----
 ----
 **All images and ideas used to create this project were appropriately attributed in the comment area of the Project related files.**
 
