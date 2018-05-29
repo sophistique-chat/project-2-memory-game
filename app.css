@@ -90,6 +90,17 @@ h1 {
     cursor: default;
     background: #C3C479;
     font-size: 33px;
+    animation-name: match;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes match {
+    from {transform: scale(1);
+    }
+    to {
+    transform: scale(1.2);
+    }
 }
 
 .deck .card.noMatch {
@@ -97,6 +108,36 @@ h1 {
     cursor: default;
     background: #DF7E6A;
     font-size: 33px;
+    animation-name: noMatch;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes noMatch {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    20% {
+        transform: rotateZ(5deg);
+    }
+    30% {
+        transform: rotateZ(-5deg);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+    60% {
+        transform: rotateZ(-5deg);
+    }
+    70% {
+        transform: rotateZ(5deg);
+    }
+    90% {
+        transform: rotateZ(-5deg);
+    }
+    100% {
+        transform: rotateZ(5deg0);
+    }
 }
 
 /*
@@ -122,6 +163,11 @@ h1 {
     display: inline-block;
     margin: 0 0.3em 0 1em;
     color: #DB836A;
+}
+
+.noStar {
+    color: darkcyan;
+    opacity: 0.5;
 }
 
 .score-panel .stars li {
@@ -185,6 +231,7 @@ h1 {
     overflow: auto;
     background-image: url('https://github.com/sophistique-chat/my-pic-bin/blob/master/floral-big.jpg?raw=true');
     /*Original image taken from Pixabay*/
+    font-size: 0.8em;
 }
 
 /* Modal Content */
@@ -207,6 +254,7 @@ h1 {
 
 .modal-info {
     width: 400px;
+    height: 380px;
     position: absolute;
     margin: -4em auto;
     display: flex;
