@@ -8,7 +8,7 @@
 | HTML | Page contents | index.html|
 | CSS | Styling intended for laptop and computer screens | app.css |
 | CSS | Styling intended for smaller screens (i.e. tablets, phones) | app-media.css |
-| JS | jQuery functions needed to enable interactive menus | app.js |
+| JS | Game functionality | app.js |
 
 ----
 ## **MATCHING GAME RULES**
