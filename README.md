@@ -49,17 +49,21 @@ Useful sources:
 - www.google.com
 ----
 External libraries:
-jQuery:
-- https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
-Google Fonts:
-- https://fonts.googleapis.com/css?family=Coda|Fascinate+Inline
-Font Awesome:
-- https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-Bootstrap:
-- https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
-Google Sound Library:
-- https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg
-- https://actions.google.com/sounds/v1/cartoon/tympani_bing.ogg
+- jQuery:
+    - https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+
+- Google Fonts:
+    - https://fonts.googleapis.com/css?family=Coda|Fascinate+Inline
+
+- Font Awesome:
+    - https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    
+- Bootstrap:
+    - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+
+- Google Sound Library:
+    - https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg
+    - https://actions.google.com/sounds/v1/cartoon/tympani_bing.ogg
 ----
 ----
 **All images and ideas used to create this project were appropriately attributed in the comment area of the Project related files.**
