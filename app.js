@@ -64,7 +64,7 @@ function shuffle(array) {
 var perf = performance.now(); /*START TIMER*/
 function Play() {
 
-    /*------SETTING UP A MOVES COUNTER----------*/
+/*------SETTING UP A MOVES COUNTER----------*/
     let moveCounter = 0;
     let counter = document.querySelector('.counter');
     /* set up the event listener for a card. If a card is clicked:*/
@@ -72,28 +72,29 @@ function Play() {
     $('.card').click(function () {
         moveCounter++;
         counter.innerHTML = moveCounter;
-        /*-------------END MOVES COUNTER-------------*/
 
-        /*  - display the card's symbol */
-        /*  - add the card to a *list* of "open" cards */
+/*-------------END MOVES COUNTER-------------*/
+
+/*  - display the card's symbol */
+/*  - add the card to a *list* of "open" cards */
 
         let openCards = $('.open').get();
         let openCardsArray = $.makeArray(openCards);
         $(this).addClass('open show');
 
-        /*  - if the list already has another card, check to see if the two cards match*/
-        /*  - if the cards do not match, remove the cards from the list and hide the card's symbol */
+/*  - if the list already has another card, check to see if the two cards match*/
+/*  - if the cards do not match, remove the cards from the list and hide the card's symbol */
 
         if (openCardsArray.length === 2) {
             $(openCardsArray).removeClass('open show');
         } else {
 
-            /*  - if the cards do match, lock the cards in the open position */
+/*  - if the cards do match, lock the cards in the open position */
 
             let openCards = $('.open').get();
             let openCardsArray = $.makeArray(openCards);
 
-            /*-------ANIMATE OPENED CARDS--------*/
+/*-------ANIMATE OPENED CARDS--------*/
 
             if (openCardsArray.length === 2 && openCardsArray[0].innerHTML !== openCardsArray[1].innerHTML) {
                 $(openCardsArray).addClass('noMatch');
@@ -103,18 +104,17 @@ function Play() {
             }
             if (openCardsArray.length === 2 && openCardsArray[0].innerHTML === openCardsArray[1].innerHTML) {
                 $(openCardsArray).addClass('match');
-
-                /*--------------END ANIMATE-------------*/
+/*--------------END ANIMATE-------------*/
 
                 let matchedCards = $('.match').get();
                 let matchedCardsArray = $.makeArray(matchedCards);
 
-                /*  - if all cards have matched, display a message with the final score*/
+/*  - if all cards have matched, display a message with the final score*/
 
                 if (matchedCardsArray.length === 16) {
                     var perf1 = performance.now(); /*END TIMER*/
 
-                    /*-------------WIN MODAL MESSAGE (timer/moves dependant)--------------*/
+/*-------------WIN MODAL MESSAGE (timer/moves dependant)--------------*/
                     let modal = document.querySelector('.modal');
                     let modalInfo = document.querySelector('.modal-info');
                     let audio = document.querySelector('#winSound');
@@ -123,27 +123,28 @@ function Play() {
                         let timeTaken = (perf1 - perf) / 1000;
                         let rating = timeTaken + moveCounter;
                         if (rating <= 60) {
-                            y = '<span class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>';
+                            y = `<span class="rate"><i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i></span>`;
                         }
                         if (rating > 60) {
-                            y = '<span class="rate"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>';
+                            y = `<span class="rate"><i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i></span>`;
                         }
                         if (rating > 80) {
-                            y = '<span class="rate"><i class="fa fa-star"></i></span>';
+                            y = `<span class="rate"><i class="fa fa-star"></i></span>`;
                         }
                         if (rating > 90) {
                             x = 0;
-                            y = '<span class="noRate"><i class="far fa-bell bell"></i> no stars!</span>';
+                            y = `<span class="noRate"><i class="far fa-bell bell"></i> no stars!</span>`;
                         }
                         audio.play();
                         setTimeout(function () {
                             modal.style.display = "block";
-                            modalInfo.innerHTML = `You won! It took you only ${(timeTaken).toFixed(0)} seconds and ${moveCounter} moves! Your star rating is: ${y}`;
+                            modalInfo.innerHTML = `You won! It took you only ${(timeTaken).toFixed(0)}
+                            seconds and ${moveCounter} moves! Your star rating is: ${y}`;
                         }, 500)
-                        console.log(rating); /*check if the moves/time taken sum is counted correctly*/
                     });
-                    /*----------------END WIN MODAL MESSAGE ------------*/
-                    console.log(perf1 - perf); /*check if the timer is counted correctly*/
+/*----------------END WIN MODAL MESSAGE ------------*/
                 }
             }
         }
@@ -154,15 +155,14 @@ function Play() {
 
 function Timer() {
 
-    /*------------IN-GAME MOVES COUNTER-------------*/
+/*------------IN-GAME MOVES COUNTER-------------*/
     let inMoveCounter = 0;
     let inCounter = document.querySelector('.counter');
     $('.card').click(function () {
         inMoveCounter++;
         inCounter.innerHTML = inMoveCounter;
-        console.log(inMoveCounter);
     });
-    /*------------END IN-GAME MOVES COUNTER----------*/
+/*------------END IN-GAME MOVES COUNTER----------*/
 
     let i = 60;
     let k = 0;
@@ -181,7 +181,7 @@ function Timer() {
         if (k <= 60) {
             k++;
         }
-        /*Make sure in-game star rating goes down gradually if no moves happened*/
+/*Make sure in-game star rating goes down gradually if no moves happened*/
         if ((inRating > 60 && inMoveCounter !== 0) || (i < 45 && inMoveCounter === 0)) {
             $(thirdStar).addClass('noStar');
             $(thirdStar).removeClass('fa-spin');
@@ -200,7 +200,7 @@ function Timer() {
         }
 
         if (i < 0) {
-            /*-----------GAME OVER MODAL MESSAGE--------*/
+/*-----------GAME OVER MODAL MESSAGE--------*/
             let openCards = $('.open').get();
             let openCardsArray = $.makeArray(openCards);
             let matchedCards = $('.match').get();
@@ -213,7 +213,7 @@ function Timer() {
                 modalInfo.innerHTML = `Game Over!`;
                 audio.play(3);
             }
-            /*------------END MODAL MESSAGE ------------*/
+/*------------END MODAL MESSAGE ------------*/
 
             window.clearTimeout(start);
         }
