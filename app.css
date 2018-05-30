@@ -80,10 +80,12 @@ h1 {
     transform: rotateY(0);
     background: #8EACA8;
     cursor: default;
+    pointer-events: none;
 }
 
 .deck .card.show {
     font-size: 33px;
+    pointer-events: none;
 }
 
 .deck .card.match {
@@ -93,6 +95,7 @@ h1 {
     animation-name: match;
     animation-duration: 0.25s;
     animation-timing-function: ease-out;
+    pointer-events: none;
 }
 
 @keyframes match {
@@ -111,6 +114,7 @@ h1 {
     animation-name: noMatch;
     animation-duration: 0.4s;
     animation-timing-function: ease-out;
+    pointer-events: none;
 }
 
 @keyframes noMatch {
